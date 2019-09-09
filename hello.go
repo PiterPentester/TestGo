@@ -13,7 +13,7 @@ func getUserName() string {
 	username := os.Getenv("USER")
 	// check if we got an empty string and attempt to get USERNAME instead which would be available on Windows
 	if username == "" {
-		username = os.Getenv("USERNAME")
+		username = os.Getenv("USERNAME","!")
 	}
 	// Return whatever we received
 	return username
@@ -21,5 +21,5 @@ func getUserName() string {
 
 // entrypoint function for our app
 func main() {
-	fmt.Printf("Hello, %s\n", getUserName())
+	fmt.Printf("Hello, %s\n", getUserName(), "How are you?")
 }
