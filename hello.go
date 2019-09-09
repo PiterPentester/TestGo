@@ -5,6 +5,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"github.com/kyokomi/emoji"
 )
 
 // create a function named getUserName that returns a single string
@@ -21,5 +22,6 @@ func getUserName() string {
 
 // entrypoint function for our app
 func main() {
-	fmt.Printf("Hello, %s\n", getUserName(), "How are you?")
+	fmt.Printf("Hello, %s\n", getUserName())
+	emoji.Println(":speech_balloon: May I take your order?")
 }
